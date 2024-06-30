@@ -14,7 +14,6 @@ public class Solution : GuessGame {
         int mid = n/2;
         while (min <= max){
             if (guess(mid) == -1){
-                min++;
                 mid -= 1;
             }
             else if (guess(mid) == 0)
@@ -22,9 +21,9 @@ public class Solution : GuessGame {
                 return mid;
             }
             else{
-                min++;
                 mid += 1;
             }
+            min++;
         }
         return -1;
     }
